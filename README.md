@@ -1,15 +1,19 @@
+# FPGA-Based Stopwatch and Pipelined CPU Implementation
+
 ## Introduction
-This project demonstrates the implementation of a stopwatch on an FPGA, using VHDL for the CPU design. It showcases two methods of interaction between the hardware timer and the CPU: polling and interrupt-driven execution.
+This repository contains two interrelated projects: a stopwatch implemented on an FPGA with VHDL, and a 5-stage pipelined CPU also implemented in VHDL. 
+
+## Part 1: Stopwatch with Polling and Interrupts
+The first part involves a stopwatch capable of measuring time intervals, reacting to user input, and implementing both polling and interrupt-driven mechanisms for interactions between the CPU and hardware timer.
+
+## Part 2: 5-Stage Pipelined CPU
+The second part extends the concepts of CPU design to a pipelined architecture. It involves creating a simplified version of the Nios II processor with a 5-stage pipeline, adapting to a Harvard architecture to avoid stalling, and handling the intricacies of pipelined execution without data forwarding.
 
 ## Features
-- Hardware timer with both polling and regular interrupt capabilities.
-- Start/stop and IRQ enable/disable controls via polling and interrupts.
-- Dual-mode operation: count-down once or continuous.
-- Interrupt service routines (ISRs) for handling timer expiries and button presses.
-
-## Implementation Details
-- Polling mechanism for timer status checks in a controlled loop.
-- Regular interrupts to manage timer events and user inputs asynchronously.
+- VHDL implementation of a stopwatch with hardware timer
+- Polling and regular interrupt mechanisms
+- Design of a 5-stage instruction pipeline
+- Reorganization of CPU components for pipeline efficiency
 
 ## Acknowledgements
-- EPFL for providing the educational resources and framework for the project.
+Special thanks to EPFL for providing the framework and guidance for these projects.
